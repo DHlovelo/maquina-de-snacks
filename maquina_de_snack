@@ -1,0 +1,50 @@
+saldo =5
+papas =0
+chocolate =0
+soda =0
+
+while saldo > 0:
+
+    print("\n MAQUINA DE SNACKS")
+    print("Saldo: Bs.", saldo)
+    print("1. papas (Bs. 1.50)")
+    print("2. chocolate (Bs. 2.00)")
+    print("3. soda (Bs. 2.50)")
+    print("4. Salir")
+
+    opcion = int(input("Seleccione una opcion: "))
+
+    if opcion == 1:
+        if saldo >= 1.5:
+            saldo = saldo - 1.5
+            papas = papas + 1
+            print("ahi tienes tus papas")
+        else:
+            print("Sin saldo suficiente")
+
+    elif opcion ==2:
+        if saldo >=2:
+            saldo = saldo -2
+            chocolate = chocolate +1
+            print("ahi tienes tu chocolate")
+        else:
+            print("sin saldo suficiente")
+
+    elif opcion == 3:
+        if saldo >= 2.5:
+            saldo = saldo - 2.5
+            soda = soda + 1
+            print("ahi tienes tu refresco")
+        else:
+            print("sin saldo suficiente")
+
+    elif opcion == 4:
+        break
+    else:
+        print("opcion invalida")
+
+print("\n RESUMEN ")
+print("Papas compradas:", papas)
+print("Chocolates comprados:", chocolate)
+print("Sodas compradas:", soda)
+print("Saldo restante: Bs.", saldo)
